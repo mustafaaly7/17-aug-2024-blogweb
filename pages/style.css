@@ -1,0 +1,300 @@
+.loginBody{
+    background: url('../images/login\ signup.webp');
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.signupBody{
+    background: url('../images/login\ signup.webp');
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+}
+
+
+.navlinks a:hover{
+    background-color: rgb(230, 230, 230);
+
+}
+.loginParent{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 40%;
+    margin: 100px auto;
+    box-shadow: 2px 2px 8px #000;
+    border: none;
+    padding: 30px;
+    /* display: flex;
+    align-items: start;
+    justify-content: space-around; */
+
+
+
+}
+
+.signupParent{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 40%;
+    margin: 70px auto;
+    box-shadow: 2px 2px 8px #000;
+    border: none;
+    padding: 30px;
+    /* display: flex;
+    align-items: start;
+    justify-content: space-around; */
+
+
+}
+.loginBox{
+    /* text-align: center; */
+    width: 100%;
+    /* flex-wrap: nowrap; */
+    
+}
+
+.loginBox a{
+    font-size: larger;
+    font-weight: bolder;
+}
+.loginFields{
+    border: 1px solid black;
+    
+}
+.loginFields input{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.loginFields ::placeholder{
+    font-weight: bold;
+}
+
+.loginBtn{
+    width: 100%;
+
+}
+.signUpbtn{
+    width: 100%;
+}
+
+/* dashboard */
+.completeDashboardui{
+
+background: url("../images/685e18ff8147427079a14ce27d984688.jpg");
+overflow: hidden;
+min-height: 100vh;
+/* width: 100%; */
+background-repeat: no-repeat;
+/* background-position: center; */
+background-size: cover;
+
+}
+
+
+.dashboardBody{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 40%;
+    margin: 100px auto;
+    box-shadow: 2px 2px 8px #000;
+    border: none;
+    padding: 30px;
+
+
+}
+/* .dashboardBody btn{
+    wid
+} */
+
+
+
+.createPost{
+    text-align: center;
+}
+
+
+
+.profilePage{
+    background: url("../images/685e18ff8147427079a14ce27d984688.jpg");
+    overflow: hidden;
+    min-height: 100vh;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+
+
+
+    
+}
+
+.profileInfo{
+
+    background-color: #fff;
+    border-radius: 15px;
+    width: 40%;
+    margin: 100px auto;
+    box-shadow: 2px 2px 8px #000;
+    border: none;
+    padding: 30px;
+
+}
+
+.profileInfo h1{
+    text-align: center;
+}
+.profileBtns{
+    text-align: center;
+    width: 100%;
+}
+.lowerBody{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#pfpimg{
+    width:40%;
+    border-radius: 50%;
+    border: 5px solid #000;
+}
+.upperBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* style  */
+
+.wholeContent{
+    background: url("../images/685e18ff8147427079a14ce27d984688.jpg");
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+.navlinks a{
+    font-size: larger;
+}
+.links:hover{
+    background-color: rgb(222, 219, 219);
+
+}
+.links{
+    margin: 0px 0px 0px 29px;
+    ;
+}
+.card img{
+    width: 100%;
+    height: 300px;
+}
+.createBlogmodal{
+    /* width: 80%; */
+    min-height: 350px;
+}
+.title ,.blogContent{
+    font-size: large;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.loginBody{
+    background: url("../images/login\ signup.webp");
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.signupBody{
+    background: url("../images/login\ signup.webp");
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+}
+.loginParent{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 40%;
+    margin: 100px auto;
+    box-shadow: 2px 2px 8px #000;
+    border: none;
+    padding: 30px;
+    /* display: flex;
+    align-items: start;
+    justify-content: space-around; */
+
+
+
+}
+
+.signupParent{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 40%;
+    margin: 70px auto;
+    box-shadow: 2px 2px 8px #000;
+    border: none;
+    padding: 30px;
+    /* display: flex;
+    align-items: start;
+    justify-content: space-around; */
+
+
+}
+.loginBox{
+    /* text-align: center; */
+    width: 100%;
+    /* flex-wrap: nowrap; */
+    
+}
+
+.loginBox a{
+    font-size: larger;
+    font-weight: bolder;
+}
+.loginFields{
+    border: 1px solid black;
+    
+}
+.loginFields input{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.loginFields ::placeholder{
+    font-weight: bold;
+}
+
+.loginBtn{
+    width: 100%;
+
+}
+.signUpbtn{
+    width: 100%;
+}
+
+.dashboard{
+    
+}
+
