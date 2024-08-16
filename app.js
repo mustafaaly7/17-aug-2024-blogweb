@@ -28,6 +28,60 @@ const uid = localStorage.getItem("userId")
 const flexSwitchCheckChecked = document.getElementById("flexSwitchCheckChecked")
 
 
+// on reload Function 
+const onLoad = async() =>{
+  try {
+    parent.innerHTML=``
+    const querySnapshot  = await getDocs (collection(db , "blogs"))
+    let tempArr = []
+  querySnapshot.forEach((doc) =>{
+if(doc.data().privacy){
+const obj = {
+  id: doc.id,
+...doc.data()
+
+
+}
+
+// renderUi(tempArr)
+
+
+tempArr.push(obj)
+}
+for(var key of tempArr){
+parent.innerHTML+=`<div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <img src="${key.imgUrl}" alt="">
+                <h5 class="card-title">${key.title}</h5>
+                <p class="card-text">${key.content}</p>
+                <a href="#" class="btn btn-primary">Delete Blog</a>
+              </div>
+            </div>
+          </div>
+`
+
+}
+
+
+
+
+
+})
+
+console.log(tempArr);
+
+
+} catch (error) {
+  alert(error.message)
+  
+}
+
+
+  
+}
+
+
 
 // image upload function 
 const imgUpload = (file) =>{
@@ -52,7 +106,7 @@ const imgUpload = (file) =>{
         case 'paused':
           console.log('Upload is paused');
           break;
-        case 'running':
+          case 'running':
           console.log('Upload is running');
           break;
       }
@@ -80,6 +134,7 @@ const imgUpload = (file) =>{
       // Upload completed successfully, now we can get the download URL
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
         console.log('File available at', downloadURL);
+        resolve(downloadURL)
       });
     }
   );
@@ -91,6 +146,8 @@ const imgUpload = (file) =>{
   }
 
 
+// post creation function 
+
 const postBlog = async() =>{
 try {
   
@@ -101,25 +158,26 @@ try {
 
 const imgUrl = await imgUpload(blogimg.files[0])
 
+
 const blogObj = {
   title : titleBlog.value,
   content :contentBlog.value ,
-  image :imgUrl,
+  imgUrl : imgUrl,
   privacy : flexSwitchCheckChecked.checked,
   uid : uid
 }
 console.log( imgUrl, blogObj);
- await addDoc(collection(db, "blogs"), blogObj);
+await addDoc(collection(db, "blogs"), blogObj);
 // console.log(blogUpload);
 
-// var myModalEl = document.getElementById("exampleModal");
-// var modal = bootstrap.Modal.getInstance(myModalEl);
-// modal.hide();
+var myModalEl = document.getElementById("exampleModal");
+var modal = bootstrap.Modal.getInstance(myModalEl);
+modal.hide();
 
-// alert("Blog Sucessfully Created.");
+alert("Blog Created Sucessfully.");
+onLoad()
 
 
-  
 } catch (error) {
   alert(error.message)
 }
@@ -139,9 +197,10 @@ console.log( imgUrl, blogObj);
 
 
 
+// signout function 
 
 const signOut = () =>{
-
+  
 localStorage.removeItem("userId")
 window.location.replace("./pages/login.html")
 alert("Signed Out successfully!!")
@@ -162,3 +221,4 @@ const postInput = document.getElementById("postInput")
 
 window.postBlog = postBlog
 window.signOut = signOut
+window.addEventListener("load" , onLoad) 
