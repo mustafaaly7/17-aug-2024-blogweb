@@ -17,7 +17,7 @@ const uid = localStorage.getItem("userId")
 
     const fullName = document.getElementById("fullName")
     const email = document.getElementById("email")
-    const phn = document.getElementById("phn")
+    const phoneNumber = document.getElementById("phoneNumber")
     const age = document.getElementById("age")
     const country = document.getElementById("country")
     const city = document.getElementById("city")
@@ -49,12 +49,12 @@ if (docSnap.exists()) {
         ...docSnap.data()
     };
     // console.log(obj);
-    fullName.value = docSnap.data().fullName
-    email.value = docSnap.data().email
-    phn.value = docSnap.data().phn
-    age.value = docSnap.data().age
-    country.value = docSnap.data().country
-    city.value = docSnap.data().city
+    fullName.value = obj.fullName
+    email.value = obj.email
+    phoneNumber.value = obj.phoneNumber
+    // age.value = docSnap.data().age
+    // country.value = docSnap.data().country
+    // city.value = docSnap.data().city
 
 } else {
     console.log("No such Info");
@@ -79,9 +79,9 @@ if (docSnap.exists()) {
 // edit btn 
 
 const editProfile = () =>{
-    fullName.removeAttribute("disabled")
-    email.removeAttribute("disabled")
-    phn.removeAttribute("disabled")
+    // fullName.removeAttribute("disabled")
+    // email.removeAttribute("disabled")
+    // phoneNumber.removeAttribute("disabled")
     age.removeAttribute("disabled")
     country.removeAttribute("disabled")
     city.removeAttribute("disabled")
@@ -103,7 +103,7 @@ const obj = {
 
     fullName: fullName.value,
     email: email.value,
-    phn: phn.value,
+    phoneNumber: phoneNumber.value,
     age: age.value,
     country: country.value,
     city: city.value,
@@ -116,7 +116,7 @@ await setDoc(doc(db, "user", uid),obj);
 
 fullName.disabled = true
     email.disabled = true
-    phn.disabled = true
+    phoneNumber.disabled = true
     age.disabled = true
     country.disabled = true
     city.disabled = true

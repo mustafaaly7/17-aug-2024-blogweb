@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-  import { getFirestore,collection, addDoc,getDocs ,  doc, setDoc ,  getDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+  import { getFirestore,collection, addDoc,getDocs ,  doc, setDoc ,  getDoc,deleteDoc ,updateDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
   import { getAuth , createUserWithEmailAndPassword,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
   import { getStorage,ref, uploadBytesResumable, getDownloadURL  } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-storage.js";
 
@@ -31,6 +31,6 @@ const storage = getStorage()
 
     doc, setDoc
 , getDoc
-,storage,ref, uploadBytesResumable, getDownloadURL, 
+,storage,ref, uploadBytesResumable, getDownloadURL,deleteDoc, updateDoc 
 
   }
